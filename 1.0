@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>Reproducción aleatoria de videos</title>
+</head>
+<body>
+  <div id="player"></div>
+  <script>
+    var videos = [
+      'https://lacartoons.com/serie/capitulo/889?t=1',
+      'https://lacartoons.com/serie/capitulo/891?t=1',
+      'https://lacartoons.com/serie/capitulo/964?t=3',
+      'https://lacartoons.com/serie/capitulo/16704?t=1'
+    ];
+    var randomIndex = Math.floor(Math.random() * videos.length);
+    var videoPlayer = document.createElement('video');
+    videoPlayer.controls = true;
+    videoPlayer.src = videos[randomIndex];
+    document.getElementById('player').appendChild(videoPlayer);
+  </script>
+</body>
+</html>
